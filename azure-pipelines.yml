@@ -18,9 +18,13 @@ steps:
   inputs:
     versionSpec: '12.16.1'
 
-- script: npm install
+- script: npm install react-native-contacts --save
   #workingDirectory: src
-  displayName: 'Install node dependencies'
+  displayName: 'Install react dependencies'
+  
+- script: yarn add react-native-contacts
+  #workingDirectory: src
+  displayName: 'Install react dependencies'
 
 - task: Gradle@2
   inputs:
