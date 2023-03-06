@@ -34,10 +34,10 @@ steps:
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'android/gradlew'
-    tasks: 'assembleDebug'
+    tasks: 'build'
     publishJUnitResults: false
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
+    #javaHomeOption: 'JDKVersion'
+    #jdkVersionOption: '1.11'
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'android/gradlew'
