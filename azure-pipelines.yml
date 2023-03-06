@@ -28,13 +28,13 @@ steps:
 
 - task: Gradle@2
   inputs:
-    #workingDirectory: 'android/grad'
     gradleWrapperFile: 'android/gradlew'
-    gradleOptions: '-Xmx3072m'
+    workingDirectory: 'android/'
+    options: '-PversionName=$(Build.BuildNumber) -PversionCode=$(Build.BuildId)'
+    tasks: 'assembleRelease'
     publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    # tasks: 'assembleRelease'
-    tasks: 'build'
+    javaHomeOption: 'JDKVersion'
+    gradleOptions: '-Xmx3072m'
 
 # - task: AndroidSigning@2
 #   inputs:
