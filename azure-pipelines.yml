@@ -28,8 +28,8 @@ steps:
 
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: 'android/gradlew'
-    workingDirectory: 'android/'
+    gradleWrapperFile: 'react-native-contacts/android/gradlew'
+    workingDirectory: 'react-native-contacts/android/'
     options: '-PversionName=$(Build.BuildNumber) -PversionCode=$(Build.BuildId)'
     tasks: 'assembleRelease'
     publishJUnitResults: false
