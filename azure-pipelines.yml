@@ -26,7 +26,7 @@ steps:
   #workingDirectory: src
   displayName: 'Install react dependencies'
 
-- task: Gradle@2
+- task: Gradle@3
   inputs:
     gradleWrapperFile: 'android/gradlew'
     tasks: 'assembleDebug'
