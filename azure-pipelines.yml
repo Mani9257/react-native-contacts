@@ -19,7 +19,7 @@ steps:
     versionSpec: '12.16.1'
 
 - script: npm install
-  workingDirectory: src
+  #workingDirectory: src
   displayName: 'Install node dependencies'
 
 - task: Gradle@2
