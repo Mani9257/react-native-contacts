@@ -43,7 +43,8 @@ steps:
     gradleWrapperFile: 'android/gradlew'
     tasks: 'build'
     publishJUnitResults: false
-    javaHomeOption: 'JDKVersion'
+    javaHomeOption: 'Path'
+    jdkDirectory: 'C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.6-10'
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
