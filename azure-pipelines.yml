@@ -25,15 +25,15 @@ steps:
     publishJUnitResults: false
     gradleOptions: '-Xmx3072m'
 
-- task: AndroidSigning@3
-  displayName: 'Android Signing'
-  inputs:
-    apkFiles: '**/*.apk'
-    apksignerKeystoreFile: 'mykeystore.keystore'
-    apksignerKeystorePassword: '$(MYAPP_RELEASE_STORE_PASSWORD)'
-    apksignerKeystoreAlias: 'mykeyalias'
-    apksignerKeyPassword: '$(MYAPP_RELEASE_KEY_PASSWORD)'
-    zipalign: false
+# - task: AndroidSigning@3
+#   displayName: 'Android Signing'
+#   inputs:
+#     apkFiles: '**/*.apk'
+#     apksignerKeystoreFile: 'mykeystore.keystore'
+#     apksignerKeystorePassword: '$(MYAPP_RELEASE_STORE_PASSWORD)'
+#     apksignerKeystoreAlias: 'mykeyalias'
+#     apksignerKeyPassword: '$(MYAPP_RELEASE_KEY_PASSWORD)'
+#     zipalign: false
 
 - task: PublishBuildArtifacts@1
   inputs:
