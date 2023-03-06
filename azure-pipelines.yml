@@ -16,7 +16,9 @@ steps:
 - task: NodeTool@0
   displayName: 'Install Node'
   inputs:
+    versionSource: 'spec'
     versionSpec: '12.16.1'
+    checkLatest: true
 
 - script: npm install 
   #workingDirectory: src
