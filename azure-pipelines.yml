@@ -20,7 +20,7 @@ steps:
     versionSpec: '12.16.1'
     checkLatest: true
 
-- script: npm install react-native-contacts
+- script: npm install
   #workingDirectory: src
   displayName: 'Install npm dependencies'
   
@@ -35,12 +35,15 @@ steps:
     
 - task: Gradle@2
   inputs:
-    workingDirectory: 'android'
     gradleWrapperFile: 'android/gradlew'
-    gradleOptions: '-Xmx3072m'
+    workingDirectory: 'android'
+    tasks: 'build'
     publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    tasks: 'bundleRelease'
+    javaHomeOption: 'Path'
+    jdkDirectory: 'C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.6-10\'
+    gradleOptions: '-Xmx3072m'
+    sonarQubeRunAnalysis: false
+    spotBugsAnalysis: false
 
 
 # - task: Gradle@3
