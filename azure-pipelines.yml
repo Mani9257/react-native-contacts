@@ -20,7 +20,7 @@ steps:
     versionSpec: '12.16.1'
     checkLatest: true
 
-- script: npm install react-native-contacts --save
+- script: npm install react-native-contacts
   #workingDirectory: src
   displayName: 'Install npm dependencies'
   
