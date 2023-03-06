@@ -28,13 +28,14 @@ steps:
 
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: 'android/gradlew'
-    workingDirectory: 'android/'
-    options: '-PversionName=$(Build.BuildNumber) -PversionCode=$(Build.BuildId)'
-    tasks: 'bundleRelease'
+    gradleWrapperFile: 'gradlew'
+    tasks: 'assembleDebug'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
     gradleOptions: '-Xmx3072m'
+    sonarQubeRunAnalysis: false
+    spotBugsAnalysis: false
 
 # - task: AndroidSigning@2
 #   inputs:
