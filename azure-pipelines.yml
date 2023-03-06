@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'macOS-latest'
 
 # variables:
 #   - group: AndroidKeystore
@@ -30,24 +30,27 @@ steps:
     versionSpec: '17'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-
-- task: Gradle@3
+    
+- task: Gradle@2
   inputs:
-    gradleWrapperFile: 'android/gradlew'
-    tasks: 'build'
-    publishJUnitResults: false
-    #javaHomeOption: 'JDKVersion'
-    #jdkVersionOption: '1.11'
-- task: Gradle@3
-  inputs:
-    gradleWrapperFile: 'android/gradlew'
-    tasks: 'build'
-    publishJUnitResults: false
-    javaHomeOption: 'Path'
-    jdkDirectory: 'C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.6-10'
+    workingDirectory: ''
+    gradleWrapperFile: 'gradlew'
     gradleOptions: '-Xmx3072m'
-    sonarQubeRunAnalysis: false
-    spotBugsAnalysis: false
+    publishJUnitResults: false
+    testResultsFiles: '**/TEST-*.xml'
+    tasks: 'assembleDebug'
+
+
+# - task: Gradle@3
+#   inputs:
+#     gradleWrapperFile: 'android/gradlew'
+#     tasks: 'build'
+#     publishJUnitResults: false
+#     javaHomeOption: 'Path'
+#     jdkDirectory: 'C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.6-10'
+#     gradleOptions: '-Xmx3072m'
+#     sonarQubeRunAnalysis: false
+#     spotBugsAnalysis: false
 
 # - task: AndroidSigning@2
 #   inputs:
