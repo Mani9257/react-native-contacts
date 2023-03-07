@@ -37,6 +37,7 @@ steps:
   inputs:
     gradleWrapperFile: 'example/android/gradlew'
     workingDirectory: 'example/android'
+    options: '--stacktrace'
     tasks: 'build'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
