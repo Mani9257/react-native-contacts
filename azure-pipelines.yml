@@ -31,18 +31,22 @@ steps:
 - script: yarn add @react-native-community/cli-platform-android
   workingDirectory: 'D:\a\1\s\example'
   displayName: 'Install yern- dependencies'
+
+- script: npx browserslist@latest --update-db
+  #workingDirectory: src
+  displayName: 'Install npx dependencies'
 - task: JavaToolInstaller@0
   inputs:
     versionSpec: '17'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
 
-- powershell: |
-    Write-Host "Show all folder content"
-    Get-ChildItem -Path D:\a\1\s\example\ -Recurse -Force
-  errorActionPreference: continue
-  displayName: Check Deployment Status
-  continueOnError: true
+# - powershell: |
+#     Write-Host "Show all folder content"
+#     Get-ChildItem -Path D:\a\1\s\example\ -Recurse -Force
+#   errorActionPreference: continue
+#   displayName: Check Deployment Status
+#   continueOnError: true
 
     
 - task: Gradle@2
