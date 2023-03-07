@@ -1,4 +1,4 @@
-node_modules
+#node_modules
 ios/RCTContacts.xcodeproj/xcuserdata
 ios/RCTContacts.xcodeproj/project.xcworkspace
 
