@@ -50,7 +50,7 @@ steps:
     gradleWrapperFile: 'example/android/gradlew'
     workingDirectory: 'example/android'
     options: '--stacktrace'
-    tasks: 'assembleRelease'
+    tasks: 'build'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
