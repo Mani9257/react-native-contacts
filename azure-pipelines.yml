@@ -50,10 +50,10 @@ steps:
     gradleWrapperFile: 'example/android/gradlew'
     workingDirectory: 'example/android'
     options: '--stacktrace'
-    tasks: 'build'
+    tasks: 'assembleRelease'
     publishJUnitResults: false
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
+    #javaHomeOption: 'JDKVersion'
+    #jdkVersionOption: '1.11'
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
