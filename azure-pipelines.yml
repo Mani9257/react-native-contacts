@@ -29,7 +29,7 @@ steps:
   displayName: 'Install yern- dependencies'
 - task: JavaToolInstaller@0
   inputs:
-    versionSpec: '15'
+    versionSpec: '17'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
     
