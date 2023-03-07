@@ -29,7 +29,7 @@ steps:
 #   displayName: 'Install npm andriod dependencies'
   
 - script: yarn add @react-native-community/cli-platform-android
-  #workingDirectory: src
+  workingDirectory: 'D:\a\1\s\example'
   displayName: 'Install yern- dependencies'
 - task: JavaToolInstaller@0
   inputs:
