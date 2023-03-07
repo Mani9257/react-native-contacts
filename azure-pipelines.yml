@@ -28,7 +28,7 @@ steps:
   #workingDirectory: src
   displayName: 'Install npm andriod dependencies'
   
-- script: yarn add react-native-contacts
+- script: yarn add react
   #workingDirectory: src
   displayName: 'Install yern- dependencies'
 - task: JavaToolInstaller@0
