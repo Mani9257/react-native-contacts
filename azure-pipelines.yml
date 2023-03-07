@@ -27,20 +27,20 @@ steps:
 - script: yarn add react-native-contacts
   #workingDirectory: src
   displayName: 'Install yern- dependencies'
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '17'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
+# - task: JavaToolInstaller@0
+#   inputs:
+#     versionSpec: '17'
+#     jdkArchitectureOption: 'x64'
+#     jdkSourceOption: 'PreInstalled'
     
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: 'android/gradlew'
-    workingDirectory: 'android'
+    gradleWrapperFile: 'example/android/gradlew'
+    workingDirectory: 'example/android'
     tasks: 'build'
     publishJUnitResults: false
-    javaHomeOption: 'Path'
-    jdkDirectory: 'C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.6-10\x64'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
