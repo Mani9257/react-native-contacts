@@ -24,11 +24,11 @@ steps:
   #workingDirectory: src
   displayName: 'Install npm dependencies'
 
-- script: npm i @react-native-community/cli-platform-android
-  #workingDirectory: src
-  displayName: 'Install npm andriod dependencies'
+# - script: npm i @react-native-community/cli-platform-android
+#   #workingDirectory: src
+#   displayName: 'Install npm andriod dependencies'
   
-- script: yarn add react
+- script: yarn add @react-native-community/cli-platform-android
   #workingDirectory: src
   displayName: 'Install yern- dependencies'
 - task: JavaToolInstaller@0
